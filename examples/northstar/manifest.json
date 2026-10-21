@@ -1,0 +1,14 @@
+{
+  "id": "northstar-demo",
+  "classification": "public-demo",
+  "workspaces": {"policies": "LoreDock Demo Policies", "context": "LoreDock Demo Company Context"},
+  "documents": [
+    {"id": "LD-LEAVE", "file": "policies/leave.md", "workspace": "policies", "title": "Leave policy", "owner": "People Operations", "date": "2026-01-01", "authority": "Published policy", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md"},
+    {"id": "LD-LOCATION", "file": "policies/work-location.md", "workspace": "policies", "title": "Work location policy", "owner": "People Operations", "date": "2026-07-01", "authority": "Published policy", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md"},
+    {"id": "LD-EXPENSES", "file": "policies/expenses.md", "workspace": "policies", "title": "Expenses and learning policy", "owner": "Finance", "date": "2026-04-01", "authority": "Published policy", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md"},
+    {"id": "LD-ONBOARDING", "file": "policies/onboarding.md", "workspace": "policies", "title": "Onboarding procedure", "owner": "People Operations and IT", "date": "2026-08-01", "authority": "Published procedure", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md"},
+    {"id": "LD-VISION", "file": "context/vision.md", "workspace": "context", "title": "Company vision", "owner": "Leadership", "date": "2026-09-01", "authority": "Strategic direction, not policy", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md"},
+    {"id": "LD-AH-AUG", "file": "context/all-hands-2026-08-14.md", "workspace": "context", "title": "All-hands August 14", "owner": "Leadership", "date": "2026-08-14", "authority": "Dated meeting notes", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md"},
+    {"id": "LD-AH-OCT", "file": "context/all-hands-2026-10-09.md", "workspace": "context", "title": "All-hands October 9", "owner": "Leadership", "date": "2026-10-09", "authority": "Dated meeting notes with unresolved proposals", "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md"}
+  ]
+}

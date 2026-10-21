@@ -1,0 +1,6 @@
+# Apply only after all model/embedding downloads. Docker's internal network
+# removes the application's external network route while retaining host access
+# where Docker Desktop supports it. Verify both properties; do not assume them.
+networks:
+  default:
+    internal: true

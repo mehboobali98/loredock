@@ -1,0 +1,30 @@
+name: loredock
+services:
+  anythingllm:
+    # v1.18.0, immutable multi-platform manifest (arm64 + amd64).
+    image: mintplexlabs/anythingllm:1.18.0@sha256:5461782e7db41318a516925949a8f8366e258dd576411fca7961fe77dff054cc
+    ports:
+      - "127.0.0.1:3001:3001"
+    environment:
+      STORAGE_DIR: /app/server/storage
+      DISABLE_TELEMETRY: "true"
+      ENABLE_BUILT_IN_LLM: "false"
+      LLM_PROVIDER: ollama
+      OLLAMA_BASE_PATH: http://host.docker.internal:11434
+      OLLAMA_MODEL_PREF: qwen3:8b
+      OLLAMA_MODEL_TOKEN_LIMIT: "8192"
+      EMBEDDING_ENGINE: native
+      VECTOR_DB: lancedb
+    volumes:
+      - type: bind
+        source: ${LOREDOCK_STORAGE:?Run python3 -m loredock init first}
+        target: /app/server/storage
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/ping').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 60s
