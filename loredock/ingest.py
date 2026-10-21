@@ -48,7 +48,8 @@ def manifest(path):
         if not text.strip() or "\x00" in text:
             raise ValueError("Document is empty or not readable text: " + doc["id"])
         doc["text"] = text
-        doc["sha256"] = hashlib.sha256(text.encode()).hexdigest()
+        fingerprint = {field: doc[field] for field in ("id", "title", "owner", "date", "authority", "source_url", "text")}
+        doc["sha256"] = hashlib.sha256(json.dumps(fingerprint, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     data["manifest_path"] = str(path)
     return data
 

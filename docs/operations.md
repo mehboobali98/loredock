@@ -24,7 +24,7 @@ python3 -m loredock restore /absolute/path/to/BACKUP.tar.gz --replace
 python3 -m loredock doctor
 ```
 
-Backup stops the application before archiving its storage, local configuration, ingestion inventory, and version record; it restarts the app afterward. Archives are mode 0600 but **not encrypted**. Store them only in an appropriate private location. Ollama model weights, logs, and evaluation runs are not included. The application storage includes native embedding caches.
+Backup stops the application before archiving its storage, persisted `server.env`, local configuration, ingestion inventory, and version record; it restarts the app afterward. Archives are mode 0600 but **not encrypted**. Store them only in an appropriate private location. Ollama model weights, logs, and evaluation runs are not included. The application storage includes native embedding caches.
 
 Restore validates archive paths and disallows links/special files, stages the contents, stops the app, and retains the previous state in an external recovery folder. It never deliberately deletes the old storage. If interrupted during a restore, keep the app stopped and inspect that recovery folder before retrying. Use the same pinned application image for the first restore test.
 
