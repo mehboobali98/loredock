@@ -24,7 +24,8 @@ def update_check(api):
         api.post(f"/workspace/{slug}/update-embeddings", {"adds": old, "deletes": []})
         if not set(old) <= workspace_documents(api, slug):
             raise APIError("Original update-check fixture was not indexed.")
-        doc = {**doc, "text": (ROOT / "examples/replacement/leave.md").read_text(), "date": "2027-01-01"}
+        doc = {**doc, "text": (ROOT / "examples/replacement/leave.md").read_text(), "date": "2026-10-15",
+               "source_url": "https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md"}
         new = upload(api, doc)
         api.post(f"/workspace/{slug}/update-embeddings", {"adds": new, "deletes": []})
         if not set(new) <= workspace_documents(api, slug):

@@ -47,6 +47,8 @@ def settings():
 
 
 def initialize():
+    if not (ROOT / "compose.yaml").is_file():
+        raise ValueError("LoreDock needs its repository assets. Run from a clone or use an editable installation.")
     path = home()
     path.mkdir(parents=True, exist_ok=True, mode=0o700)
     path.chmod(0o700)

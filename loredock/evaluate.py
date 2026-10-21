@@ -1,5 +1,6 @@
 """Reproducible measurements; correctness remains an explicit review judgment."""
 import json
+import html
 import re
 import shutil
 import time
@@ -62,18 +63,27 @@ def markdown(report):
              f"Warm latency: {human['within_30_seconds']}/{human['standard_warm_questions']} standard questions within 30 seconds.",
              f"Request errors: {human['errors']}.", "", "## Configuration", "", "```json",
              json.dumps(report["configuration"], indent=2, ensure_ascii=False), "```", "", "## Results", "",
-             "| ID | Kind | Seconds | Retrieved expected source | Human review |",
-             "|---|---|---:|---|---|"]
+             "| ID | Kind | Seconds | Retrieved expected source | Agent review | Human review |",
+             "|---|---|---:|---|---|---|"]
     for row in report["results"]:
         review = row.get("reviews", {}).get("human")
         status = "pending" if not review else ("pass" if review["correct"] and review["behavior_satisfied"]
                      and (row["kind"] != "answerable" or review["citations_supported"]) else "fail")
-        lines.append(f"| {row['id']} | {row['kind']} | {row['latency_seconds']:.2f} | {row['expected_source_retrieved']} | {status} |")
+        assessed = row.get("reviews", {}).get("agent")
+        agent_status = "pending" if not assessed else ("pass" if assessed["correct"] and assessed["behavior_satisfied"]
+                     and (row["kind"] != "answerable" or assessed["citations_supported"]) else "fail")
+        lines.append(f"| {row['id']} | {row['kind']} | {row['latency_seconds']:.2f} | {row['expected_source_retrieved']} | {agent_status} | {status} |")
     lines += ["", "## Answers and review rubrics", ""]
     for row in report["results"]:
         lines += ["### " + row["id"], "", row["question"], "", "**Expected behavior:** " + row["rubric"], "",
                   "**Answer:**", "", row.get("answer") or "(No answer; request failed.)", "",
                   "**Returned source IDs:** " + ", ".join(row["retrieved_source_ids"]), ""]
+        if row.get("sources"):
+            lines += ["<details><summary>Returned passages for support review</summary>", ""]
+            for source in row["sources"]:
+                lines += ["**" + html.escape(source.get("title", "Untitled source")) + "**", "",
+                          "<pre>" + html.escape(source.get("text", source.get("chunk", "No passage returned."))) + "</pre>", ""]
+            lines += ["</details>", ""]
         for kind, review in row.get("reviews", {}).items():
             lines += [f"**{kind.capitalize()} assessment:** {review.get('notes', '')}", ""]
     return "\n".join(lines) + "\n"

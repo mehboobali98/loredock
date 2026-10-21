@@ -1,7 +1,7 @@
 # Northstar Demo — Leave policy, replacement test only
 
 Document ID: LD-LEAVE
-Authority: Synthetic replacement fixture, effective 2027-01-01
+Authority: Synthetic replacement fixture, effective 2026-10-15
 Owner: People Operations
 This file is used only in a temporary update-verification workspace, never as the normal demo policy.
 
