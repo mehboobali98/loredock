@@ -1,6 +1,7 @@
 """Local process lifecycle, version recording, and quiesced backups."""
 import json
 import os
+import platform
 import shutil
 import signal
 import subprocess
@@ -9,7 +10,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from .api import Client, APIError
-from .config import ROOT, IMAGE, MODEL, home, initialize, read_json, settings, write_json
+from .config import ROOT, IMAGE, MODEL, home, initialize, read_json, settings, sha256, write_json
 
 
 def timestamp():
@@ -113,6 +114,16 @@ def record_versions():
     record = {"recorded_at": timestamp(), "anythingllm_image": IMAGE, "ollama_version": version.get("version"),
               "model": model, "context_tokens": 8192, "embedding_model": "Xenova/all-MiniLM-L6-v2",
               "embedding_provider": "native", "vector_database": "lancedb"}
+    record["host"] = {"os": platform.system(), "release": platform.release(), "architecture": platform.machine(),
+                      "logical_cpus": os.cpu_count()}
+    cache = home() / "storage/models/Xenova/all-MiniLM-L6-v2"
+    record["embedding_file_hashes"] = {str(path.relative_to(cache)): sha256(path) for path in sorted(cache.rglob("*")) if path.is_file()}
+    if settings().get("api_key"):
+        try:
+            labels = "text_splitter_chunk_size,text_splitter_chunk_overlap,memory_enabled,memory_auto_extraction,default_agent_skills,disabled_agent_skills"
+            record["application_preferences"] = client().request("GET", "/api/admin/system-preferences-for?labels=" + labels, auth=False)
+        except APIError:
+            record["application_preferences"] = "unavailable; inspect UI preferences"
     write_json(home() / "versions.json", record)
     return record
 
@@ -144,6 +155,9 @@ def configure():
         "agent_clarifying_questions_enabled": False,
         "custom_app_name": "LoreDock", "meta_page_title": "LoreDock — private knowledge"}, auth=False)
     api.request("POST", "/api/onboarding", {}, auth=False, expect_json=False)
+    applied = api.get("/system")["settings"]
+    if applied.get("MemoryEnabled") or applied.get("MemoryAutoExtraction"):
+        raise RuntimeError("Memory settings were not disabled; inspect UI preferences.")
     print("Local providers, chunking, and memory settings configured. Application key saved outside Git.")
     return record_versions()
 
