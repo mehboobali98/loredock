@@ -54,6 +54,9 @@ def initialize():
     path.chmod(0o700)
     for name in ("storage", "runs", "backups", "logs", "models"):
         (path / name).mkdir(exist_ok=True, mode=0o700)
+    server_env = path / "server.env"
+    if not server_env.exists():
+        server_env.touch(mode=0o600)
     if not (path / "config.json").exists():
         write_json(path / "config.json", {"base_url": "http://127.0.0.1:3001", "api_key": ""})
     return path

@@ -18,7 +18,7 @@ def timestamp():
 
 
 def compose(*args, capture=False):
-    env = {**os.environ, "LOREDOCK_STORAGE": str(home() / "storage")}
+    env = {**os.environ, "LOREDOCK_STORAGE": str(home() / "storage"), "LOREDOCK_ENV_FILE": str(home() / "server.env")}
     files = ["-f", str(ROOT / "compose.yaml")]
     if (home() / "offline.enabled").exists():
         files += ["-f", str(ROOT / "compose.offline.yaml")]
@@ -170,7 +170,7 @@ def backup():
         with target.open("xb") as stream:
             os.chmod(target, 0o600)
             with tarfile.open(fileobj=stream, mode="w:gz") as archive:
-                for name in ("storage", "config.json", "ingestion.json", "versions.json"):
+                for name in ("storage", "server.env", "config.json", "ingestion.json", "versions.json"):
                     path = home() / name
                     if path.exists():
                         archive.add(path, arcname=name)
@@ -183,7 +183,7 @@ def backup():
 def safe_extract(archive, destination):
     """Reject links, path traversal, devices, and unexpected top-level entries."""
     destination = Path(destination).resolve()
-    allowed = {"storage", "config.json", "ingestion.json", "versions.json"}
+    allowed = {"storage", "server.env", "config.json", "ingestion.json", "versions.json"}
     members = archive.getmembers()
     for member in members:
         path = Path(member.name)
@@ -216,7 +216,7 @@ def restore(path, replace=False):
     recovery = home() / ("before-restore-" + timestamp())
     recovery.mkdir(mode=0o700)
     try:
-        for name in ("storage", "config.json", "ingestion.json", "versions.json"):
+        for name in ("storage", "server.env", "config.json", "ingestion.json", "versions.json"):
             existing = home() / name
             if existing.exists():
                 existing.rename(recovery / name)
@@ -228,6 +228,6 @@ def restore(path, replace=False):
                 item.rename(home() / item.name)
         raise
     finally:
-        compose("start")
+        compose("up", "-d", "--force-recreate", "--wait", "--wait-timeout", "240")
     print("Restored. Previous state retained at " + str(recovery))
     return recovery

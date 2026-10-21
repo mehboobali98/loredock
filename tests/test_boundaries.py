@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 from loredock.api import APIError, Client
-from loredock.config import ROOT, home
+from loredock.config import ROOT, home, initialize
 from loredock.evaluate import load_suite, summarize
 from loredock.ingest import ingest, manifest, verify_corpus
 from loredock.runtime import safe_extract
@@ -18,6 +18,29 @@ class Boundaries(unittest.TestCase):
         with patch.dict(os.environ, {"LOREDOCK_HOME": str(ROOT / "data")}):
             with self.assertRaises(ValueError):
                 home()
+
+    def test_initialize_preserves_private_environment_and_restricts_key_file(self):
+        with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ, {"LOREDOCK_HOME": directory}):
+            initialize()
+            environment = Path(directory, "server.env")
+            environment.write_text("FIXTURE_SETTING=retained\n")
+            initialize()
+            self.assertEqual(environment.read_text(), "FIXTURE_SETTING=retained\n")
+            self.assertEqual(Path(directory, "config.json").stat().st_mode & 0o777, 0o600)
+
+    def test_metadata_change_invalidates_ingestion_fingerprint(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "source.md").write_text("Fictional policy text, unchanged.")
+            data = {"id": "private-fixture", "classification": "private", "workspaces": {"policies": "Fixture"},
+                    "documents": [{"id": "LD-FIXTURE", "file": "source.md", "workspace": "policies", "title": "Fixture",
+                                   "owner": "Example", "date": "2026-01-01", "authority": "Draft", "source_url": "https://example.invalid"}]}
+            path = root / "manifest.json"
+            path.write_text(json.dumps(data))
+            first = manifest(path)["documents"][0]["sha256"]
+            data["documents"][0]["authority"] = "Approved policy"
+            path.write_text(json.dumps(data))
+            self.assertNotEqual(first, manifest(path)["documents"][0]["sha256"])
 
     def test_remote_or_credentialed_endpoints_rejected(self):
         for url in ("https://cloud.example", "http://127.0.0.1.evil.test", "http://secret@localhost:3001", "http://localhost:3001/path"):
