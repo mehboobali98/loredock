@@ -43,7 +43,7 @@ Unchanged indexed documents are skipped. A processing-format revision also trigg
 
 ## Offline check
 
-After successful downloads and ingestion, `python3 -m loredock offline on` isolates the application on a Docker internal network. A fixed-target relay, using the already pinned application image's Node runtime, bridges only native Ollama inference/inspection endpoints. Pull, push, and other management routes are denied. The relay has no published port; no new container image is needed. This leaves the host's connectivity unchanged and does not establish a host air gap.
+After successful downloads and ingestion, `python3 -m loredock offline on` isolates the application on a Docker internal network. A fixed-target relay, using the already pinned application image's Node runtime, bridges only native Ollama inference/inspection endpoints. Pull, push, and other management routes are denied. Its model port is not published; no new container image is needed. This leaves the host's connectivity unchanged and does not establish a host air gap.
 
 Run `python3 -m loredock verify-offline` to check from the application container that external HTTPS fails, `http://ollama-relay:11434/api/version` succeeds, and model downloads are denied. Then run ten questions with `python3 -m loredock eval --limit 10`. Restore normal networking with `python3 -m loredock offline off`. The managed native Ollama server has cloud features disabled; use downloaded local weights. A preexisting server requires its owner's configuration check.
 
@@ -67,6 +67,6 @@ Direct native-host access failed on the reference Docker Desktop internal networ
 - Port occupied: identify the existing service before changing or stopping it. The reference app uses port 3001.
 - App cannot reach Ollama: verify host `127.0.0.1:11434/api/version`, then inspect access to `host.docker.internal:11434` from the container. Do not casually bind the model to all interfaces.
 - First embedding fails: check app logs and outbound access for the initial weight download; rerun ingest after fixing the cause. LoreDock checks actual document membership.
-- A model transfer stalls: interrupt `model pull` and retry it to resume Ollama's saved progress. The CLI reports streamed transferred-byte progress, not allocated disk space. Partial model files are not proof of a successful download; Ollama verifies the final digest.
+- A model transfer stalls: interrupt `model pull` and retry it to resume Ollama's saved progress. The CLI reports streamed transferred-byte progress, including retry resets, rather than allocated disk space. In-flight progress can roll back when Ollama retries a stalled part; final digest verification establishes completion. Partial model files are not proof of a successful download; Ollama verifies the final digest.
 - Incorrect answer: inspect extracted text, retrieved passages, authority/date metadata, then model behavior. Change one retrieval setting at a time and rerun the same suite.
 - API key invalid: create a new key under AnythingLLM Developer API, set `LOREDOCK_API_KEY` locally, and revoke obsolete keys through the UI. Never put it in a command screenshot or committed file.

@@ -1,0 +1,26 @@
+{
+  "checked_at": "20261021T120207325861Z",
+  "old_document_membership_removed": true,
+  "old_fixture_text_returned": false,
+  "answer": "<think>Okay, the user is asking about the current annual paid leave allowance. Let me check the provided context.\n\nLooking at CONTEXT 0, the document mentions that the annual paid leave allowance is now 22 days per calendar year. The previous allowance was 20 days. The document is labeled as a replacement test, effective from 2026-10-15. Since the user is asking about the current allowance, and the policy is effective as of that date, the answer should be 22 days. The source is the ld-leave-leave-policy.txt document from the given GitHub link. I need to make sure to cite the source correctly as per the instructions.\n</think>The current annual paid leave allowance is **22 days per calendar year**.  \n\nSource: [https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md](https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md)",
+  "sources": [
+    {
+      "id": "328b24b9-9f33-46b3-9be1-a9ec834b7bea",
+      "url": "file://ld-leave-leave-policy.txt",
+      "title": "ld-leave-leave-policy.txt",
+      "docAuthor": "People Operations",
+      "description": "Published policy",
+      "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md",
+      "chunkSource": "link://https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md",
+      "published": "10/15/2026, 12:00:00 AM",
+      "wordCount": 84,
+      "token_count_estimate": 170,
+      "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/15/2026, 12:00:00 AM\nsource: https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md\n</document_metadata>\n\nDocument ID: LD-LEAVE\nTitle: Leave policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/replacement/leave.md\nEffective/version date: 2026-10-15\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Leave policy, replacement test only\n\nDocument ID: LD-LEAVE\nAuthority: Synthetic replacement fixture, effective 2026-10-15\nOwner: People Operations\nThis file is used only in a temporary update-verification workspace, never as the normal demo policy.\n\nThe annual paid leave allowance is now 22 days per calendar year, replacing the previous allowance of 20 days.\nUp to 5 days may carry forward and must be used by March 31. All other rules in the original fixture remain unchanged.",
+      "_distance": 0.4259427785873413,
+      "score": 0.5740572214126587
+    }
+  ],
+  "fixture_search_chunks": 1,
+  "note": "Membership and returned-source checks are mechanical. Search covers up to 100 chunks in this tiny fixture; inspect the answer for 22 days.",
+  "temporary_workspace_removed": true
+}

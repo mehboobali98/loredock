@@ -55,6 +55,8 @@ The suite has 20 answerable questions, five unsupported questions, and five ambi
 
 **Unreviewed results stay pending.** An expected document being retrieved is only a diagnostic. A human must judge correctness, conditions, and support against the displayed rubric. Agent assessments are recorded separately and cannot satisfy the human quality gate. See [evaluation methodology](evaluation/README.md) and [validation status](docs/validation.md).
 
+On the reference M3 Pro, the [published final run](reports/public/20261021T114957262249Z/evaluation.md) scored **18/20 answerable, 5/5 unsupported, and 4/5 ambiguous** under agent review. All ten standard warm queries completed within 30 seconds, and all 30 requests ran on an isolated application network. The quality gate **still fails**; human review is pending. Earlier failed runs and the remaining errors are published alongside it.
+
 ```bash
 python3 -m loredock review /path/to/RUN.json /path/to/annotations.json --reviewer human
 python3 -m loredock export-public /path/to/RUN.json
