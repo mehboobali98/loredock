@@ -1,6 +1,6 @@
 # Validation status
 
-Reference host: Apple M3 Pro, 18 GB unified memory, macOS 26.3.1, ARM64. Application: AnythingLLM 1.18.0 at the committed immutable image digest. All checks use the seven fictional Northstar documents. No real employer documents have been imported.
+Reference host: Apple M3 Pro, 18 GB unified memory, macOS 26.3.1, ARM64. Application: AnythingLLM 1.18.0 at the committed immutable image digest. All published checks use the seven fictional Northstar documents. Company source documents and private validation evidence are excluded.
 
 | Check | Observed result |
 |---|---|
@@ -17,7 +17,7 @@ Reference host: Apple M3 Pro, 18 GB unified memory, macOS 26.3.1, ARM64. Applica
 | Final offline answers | All 30 questions completed on the isolated application network; no request errors |
 | Replacement answer | Temporary fixture changed from 20 to 22 annual days; answer cites the replacement; old membership and original allowance clause absent from retrieval |
 | Human acceptance | Pending human review of answers and returned passages |
-| Company exports | Pending readable exports and private validation |
+| Company exports | Separate private workflow; no company validation evidence is published |
 
 Evidence: [initial operations](../reports/public/operations.json), [final backup/restore and answer](../reports/public/operations-final.json), [replacement](../reports/public/replacement.json), [offline routes](../reports/public/offline-network.json), and [retrieval diagnostic](../reports/public/retrieval-only.json). Source retrieval is a diagnostic, not proof of factual correctness or passage support. The normal local network was restored after testing.
 
