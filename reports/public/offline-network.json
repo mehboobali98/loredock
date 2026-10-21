@@ -12,6 +12,6 @@
     "error": "TypeError"
   },
   "passed": true,
-  "checked_at": "20261021T084644332291Z",
+  "checked_at": "20261021T120302336823Z",
   "scope": "Application network isolation; native model cloud features must be disabled separately."
 }

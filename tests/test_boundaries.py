@@ -360,6 +360,17 @@ class Boundaries(unittest.TestCase):
             api.post("/document/raw-text", {})
         self.assertNotIn("private text", str(raised.exception))
 
+    def test_plain_text_workspace_deletion_response(self):
+        api = Client("http://127.0.0.1:3001", "secret")
+        with patch.object(api.opener, "open") as opened:
+            opened.return_value.__enter__.return_value.read.return_value = b"OK"
+            self.assertEqual(
+                api.request("DELETE", "/api/v1/workspace/fixture", expect_json=False),
+                {},
+            )
+            with self.assertRaisesRegex(APIError, "invalid JSON"):
+                api.request("DELETE", "/api/v1/workspace/fixture")
+
     def test_unregistered_workspace_document_aborts_evaluation(self):
         data = {"documents": [{"id": "LD-X", "sha256": "hash"}]}
         state = {

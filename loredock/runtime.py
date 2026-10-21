@@ -203,9 +203,14 @@ def model_pull() -> None:
             total, completed = event.get("total", 0), event.get("completed", 0)
             if total > 1_000_000:
                 percent = int(completed * 100 / total)
-                if status != previous_status or percent >= previous_percent + 5:
+                if status != previous_status or abs(percent - previous_percent) >= 5:
+                    retry = (
+                        " (transfer progress reset during retry)"
+                        if percent < previous_percent
+                        else ""
+                    )
                     print(
-                        f"{status}: {percent}% ({completed / 1e9:.2f}/{total / 1e9:.2f} GB)",
+                        f"{status}: {percent}% ({completed / 1e9:.2f}/{total / 1e9:.2f} GB){retry}",
                         flush=True,
                     )
                     previous_percent = percent

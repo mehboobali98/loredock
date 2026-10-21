@@ -101,7 +101,8 @@ def update_check(api: Client) -> None:
             raise APIError("Superseded fixture text appeared in retrieval.")
         print(str(path))
     finally:
-        api.request("DELETE", "/api/v1/workspace/" + slug)
+        # The pinned upstream deletion endpoint returns plain-text "OK".
+        api.request("DELETE", "/api/v1/workspace/" + slug, expect_json=False)
 
 
 def parser() -> argparse.ArgumentParser:
