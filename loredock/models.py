@@ -43,6 +43,7 @@ class Manifest(TypedDict):
 
 
 class IndexedDocument(TypedDict):
+    format_revision: int
     sha256: str
     locations: list[str]
     workspace: str

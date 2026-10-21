@@ -24,9 +24,11 @@ AnythingLLM performs native MiniLM embedding and LanceDB search. Both query and 
 
 The application connects to native Ollama through `host.docker.internal:11434`; the Python tools connect through host loopback. Running inference natively preserves access to Apple's GPU. The container's optional built-in model engine is disabled.
 
-Query mode provides grounding and avoids normal rolling chat context. Each evaluation item additionally uses a fresh session ID. Model instructions request concise answers, citations, preserved exceptions, uncertainty, and no reasoning transcript. Qwen's `/no_think` instruction is a soft prompt control, not a general guarantee for other models.
+Query mode requires document context; it does not by itself isolate consecutive turns. The pinned application can reuse recent thread messages and source passages. Every evaluation item uses a fresh session ID to enforce independence. Ordinary thread history remains available while additional persistent memory is disabled. Model instructions request verbatim policy clauses with original-source links, preserved exceptions, and uncertainty. Other answers remain concise. Stable manifest IDs track ingestion and evaluation; the model need not infer IDs from normalized filenames. Reasoning remains enabled upstream despite the soft instruction, so reports preserve raw output while Markdown displays the final answer. Qwen's `/no_think` instruction is a soft prompt control, not a general guarantee for other models.
 
 Source cards show retrieved passages, not an automatic factual-support verdict. Evaluation reports retain returned passages so reviewers can judge each substantive claim.
+
+Ingestion revision 2 sends the manifest's effective/version date as UTC epoch milliseconds, as required by the raw-text API, and uses the supported `link://` source prefix. This places the original source URL and date in every chunk's metadata. The initial uploader sent ISO strings, causing the collector to fall back to processing time; historical reports retain that observed defect. Explicit authority and effective/version text remain part of the source. A processing-format revision triggers replacement even when source hashes are unchanged.
 
 ## Boundaries
 

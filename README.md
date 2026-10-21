@@ -32,7 +32,7 @@ open /Applications/Docker.app
 python3 -m loredock demo
 ```
 
-The first run downloads the model and, during ingestion, the embedding weights. Later runs reuse local files. Open **http://127.0.0.1:3001** and select **LoreDock Demo Policies** or **LoreDock Demo Company Context**. If onboarding is shown, select the configured local providers and complete it; do not enable optional memory or tools.
+The first run downloads the model and, during ingestion, the embedding weights. Later runs reuse local files. Open **http://127.0.0.1:3001** and select **LoreDock Demo Policies** or **LoreDock Demo Company Context**. Click **New Thread** before sending the first question. If onboarding is shown, select the configured local providers and complete it; do not enable optional memory or tools.
 
 Example questions:
 
@@ -41,7 +41,7 @@ Example questions:
 - In Company Context: “What is the confirmed onboarding checklist rollout date?”
 - “Which company provides our health insurance?”
 
-Expand AnythingLLM's source cards to inspect the supporting text. Answers also request stable document labels such as `[LD-LEAVE]`; these labels do not independently prove that every claim is supported.
+Expand AnythingLLM's source cards to inspect the supporting text. Policy answers request short exact clauses and links to the original source. Stable document IDs track ingestion and evaluation. Neither a link nor a retrieved source card independently proves that every claim is supported.
 
 ## Reproduce the evaluation
 
@@ -126,7 +126,7 @@ CI tests the tooling and Compose configuration. It does not simulate a passing m
 ## Limits and next steps
 
 - English text/Markdown exports first. PDF/OCR, Google authentication, and live connectors are outside the initial importer.
-- Query mode treats questions independently; stored chat history remains visible, but follow-up references may need explicit context. Additional memory is deferred.
+- Query mode requires document context and retains ordinary thread history. Evaluations use fresh sessions for independent questions. Start a new thread after policy updates; additional persistent memory is deferred.
 - Native-model performance depends on hardware and context. Results are a small synthetic benchmark, not a broad model comparison.
 - Localhost access is for one trusted operator. Shared deployment requires authentication, permission enforcement, source freshness, and capacity testing.
 - More employees do not automatically require a new vector database. Measure concurrency, retrieval latency, and update load before changing it.

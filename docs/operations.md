@@ -39,7 +39,7 @@ python3 -m loredock ingest --manifest /absolute/path/to/manifest.json
 python3 -m loredock verify-update
 ```
 
-Unchanged indexed documents are skipped. Changed documents are uploaded/embedded and checked before old memberships are removed. Entries deleted from the manifest are withdrawn from their registered workspace. API errors are not atomic transactions; inspect state and workspace membership after interruption. Withdrawing a source does not erase historical chats, extracted files, archives, or other workspaces.
+Unchanged indexed documents are skipped. A processing-format revision also triggers replacement, so corrected metadata is applied without editing the source files. Changed documents are uploaded/embedded and checked before old memberships are removed. Entries deleted from the manifest are withdrawn from their registered workspace. API errors are not atomic transactions; inspect state and workspace membership after interruption. Withdrawing a source does not erase historical chats, extracted files, archives, or other workspaces. Start a new thread after updates: upstream can backfill earlier source passages from the current conversation, even in Query mode. Replacement checks and evaluations use fresh sessions.
 
 ## Offline check
 
@@ -54,7 +54,7 @@ Direct native-host access failed on the reference Docker Desktop internal networ
 ## Update software and models
 
 1. Back up, record the current image digest/model digest, and review upstream release notes.
-2. Change the pinned release and immutable manifest digest together in `compose.yaml` and `loredock/config.py`.
+2. Change the pinned release and immutable manifest digest together in `compose.yaml`, `compose.offline.yaml`, and `loredock/config.py`.
 3. Start the new application against a copy of private storage first; migrations may affect rollback.
 4. Rerun tooling tests, ingestion checks, the same question suite, replacement, persistence, and restore checks.
 5. Publish measured differences and unresolved failures. Do not silently overwrite a benchmark from another configuration.

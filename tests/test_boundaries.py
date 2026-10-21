@@ -9,12 +9,46 @@ from unittest.mock import patch
 
 from loredock.api import APIError, Client
 from loredock.config import ROOT, home, initialize, read_json
-from loredock.evaluate import load_suite, source_ids, summarize
-from loredock.ingest import ingest, manifest, verify_corpus
+from loredock.evaluate import (
+    citation_ids,
+    citation_links,
+    load_suite,
+    review_passes,
+    source_ids,
+    summarize,
+)
+from loredock.ingest import INGESTION_REVISION, ingest, manifest, upload, verify_corpus
 from loredock.runtime import _replace_state, safe_extract
 
 
 class Boundaries(unittest.TestCase):
+    def test_reasoning_mentions_do_not_count_as_final_answer_citations(self):
+        raw = "<think>Consider [LD-LEAVE]</think>The policy states it [LD-LOCATION]."
+        self.assertEqual(citation_ids(raw), ["LD-LOCATION"])
+        linked = "<think>[Wrong](https://example.invalid/wrong)</think>Rule [Policy](https://example.invalid/policy)."
+        self.assertEqual(citation_links(linked), ["https://example.invalid/policy"])
+
+    def test_upload_uses_epoch_milliseconds_and_supported_link_provenance(self):
+        class Fake:
+            def post(self, endpoint, body):
+                self.metadata = body["metadata"]
+                return {"documents": [{"location": "fixture.json"}]}
+
+        doc = manifest(ROOT / "examples/northstar/manifest.json")["documents"][0]
+        fake = Fake()
+        upload(fake, doc)
+        self.assertEqual(fake.metadata["published"], 1767225600000)
+        self.assertEqual(fake.metadata["chunkSource"], "link://" + doc["source_url"])
+
+    def test_wrong_citation_blocks_an_ambiguous_answer_pass(self):
+        row = {"kind": "ambiguous", "error": None}
+        review = {
+            "correct": True,
+            "behavior_satisfied": True,
+            "citations_supported": False,
+        }
+        self.assertFalse(review_passes(row, review))
+
     def test_missing_required_json_is_not_silently_accepted(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "missing.json"
@@ -106,7 +140,7 @@ class Boundaries(unittest.TestCase):
         ]
         self.assertEqual(source_ids(sources, {"LD-LEAVE", "LD-LOCATION"}), ["LD-LEAVE"])
 
-    def test_completed_pending_embedding_is_reused_after_lost_response(self):
+    def test_format_upgrade_reuses_completed_embedding_after_lost_response(self):
         class Fake:
             def __init__(self):
                 self.paths = {"old.json"}
@@ -160,7 +194,7 @@ class Boundaries(unittest.TestCase):
                     "workspaces": {"policies": "fixture"},
                     "documents": {
                         "LD-FIXTURE": {
-                            "sha256": "old-hash",
+                            "sha256": manifest(path)["documents"][0]["sha256"],
                             "locations": ["old.json"],
                             "workspace": "fixture",
                         }
@@ -331,7 +365,12 @@ class Boundaries(unittest.TestCase):
         state = {
             "workspaces": {"policies": "demo"},
             "documents": {
-                "LD-X": {"sha256": "hash", "locations": ["known"], "workspace": "demo"}
+                "LD-X": {
+                    "sha256": "hash",
+                    "locations": ["known"],
+                    "workspace": "demo",
+                    "format_revision": INGESTION_REVISION,
+                }
             },
         }
 
@@ -341,7 +380,7 @@ class Boundaries(unittest.TestCase):
                     "documents": [{"docpath": "known"}, {"docpath": "private-extra"}]
                 }
 
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "unregistered"):
             verify_corpus(Fake(), data, state)
 
     def test_backup_rejects_traversal_links_and_special_files(self):
