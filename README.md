@@ -109,6 +109,12 @@ Start with [architecture](docs/architecture.md), [decision records](docs/decisio
 ## Development
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --editable '.[dev]'
+ruff check loredock tests
+ruff format --check loredock tests
+mypy
 python3 -m unittest discover -s tests -v
 python3 -m loredock --help
 ```
