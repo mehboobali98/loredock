@@ -29,6 +29,7 @@ from .runtime import (
     record_versions,
     restore,
     timestamp,
+    verify_offline,
     wait_ready,
 )
 
@@ -98,6 +99,7 @@ def parser() -> argparse.ArgumentParser:
         "demo",
         "backup",
         "verify-update",
+        "verify-offline",
     ):
         commands.add_parser(name)
     model = commands.add_parser("model")
@@ -199,6 +201,8 @@ def run(args: argparse.Namespace) -> None:
         wait_ready()
     elif args.command == "verify-update":
         update_check(client())
+    elif args.command == "verify-offline":
+        verify_offline()
     elif args.command == "doctor":
         checks: JSONObject = {
             "python": sys.version.split()[0],

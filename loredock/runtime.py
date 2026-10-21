@@ -12,6 +12,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from . import __version__
 from .api import APIError, Client
 from .config import (
     IMAGE,
@@ -86,7 +87,7 @@ def offline(enabled: bool) -> None:
         marker.unlink()
     compose("up", "-d", "--wait", "--wait-timeout", "240")
     print(
-        "Internal network enabled. Verify external access fails and local model access succeeds."
+        "Isolated application network enabled with a fixed local-model relay. Verify both routes."
         if enabled
         else "Normal project network restored."
     )
@@ -135,6 +136,24 @@ def model_start() -> None:
                 ) from None
             time.sleep(1)
     raise RuntimeError("Ollama startup timed out. Inspect the private ollama.log.")
+
+
+def verify_offline() -> Path:
+    """Check routes from the isolated app; live answers are a separate evaluation."""
+    if not (home() / "offline.enabled").exists():
+        raise ValueError("Enable the offline network before verifying it.")
+    completed = compose(
+        "exec", "-T", "anythingllm", "node", "/offline-check.cjs", capture=True
+    )
+    result = json.loads(completed.stdout)
+    result["checked_at"] = timestamp()
+    result["scope"] = (
+        "Application network isolation; native model cloud features must be disabled separately."
+    )
+    path = home() / "runs/offline-network.json"
+    write_json(path, result)
+    print(str(path))
+    return path
 
 
 def model_stop() -> None:
@@ -209,6 +228,7 @@ def record_versions() -> JSONObject:
         (item for item in tags.get("models", []) if item.get("name") == MODEL), None
     )
     record: JSONObject = {
+        "loredock_version": __version__,
         "recorded_at": timestamp(),
         "anythingllm_image": IMAGE,
         "ollama_version": version.get("version"),
@@ -217,6 +237,9 @@ def record_versions() -> JSONObject:
         "embedding_model": "Xenova/all-MiniLM-L6-v2",
         "embedding_provider": "native",
         "vector_database": "lancedb",
+        "application_network": "isolated"
+        if (home() / "offline.enabled").exists()
+        else "default",
     }
     record["host"] = {
         "os": platform.system(),
@@ -271,7 +294,9 @@ def configure() -> JSONObject:
         "/system/update-env",
         {
             "LLMProvider": "ollama",
-            "OllamaLLMBasePath": "http://host.docker.internal:11434",
+            "OllamaLLMBasePath": "http://ollama-relay:11434"
+            if (home() / "offline.enabled").exists()
+            else "http://host.docker.internal:11434",
             "OllamaLLMModelPref": MODEL,
             "OllamaLLMTokenLimit": 8192,
             "EmbeddingModelMaxChunkLength": 1000,

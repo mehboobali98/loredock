@@ -1,0 +1,17 @@
+{
+  "local_model": {
+    "reachable": true,
+    "status": 200
+  },
+  "downloads": {
+    "reachable": true,
+    "status": 403
+  },
+  "external_https": {
+    "reachable": false,
+    "error": "TypeError"
+  },
+  "passed": true,
+  "checked_at": "20261021T084644332291Z",
+  "scope": "Application network isolation; native model cloud features must be disabled separately."
+}

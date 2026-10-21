@@ -60,6 +60,17 @@ def source_ids(sources: list[Any], known_ids: set[str] | None = None) -> list[st
     return sorted(set(re.findall(r"\bLD-[A-Z0-9]+(?:-[A-Z0-9]+)*\b", serialized)))
 
 
+def review_passes(row: JSONObject, review: JSONObject) -> bool:
+    """Use the same per-answer decision in totals and rendered tables."""
+    return bool(
+        review["correct"]
+        and review["behavior_satisfied"]
+        and not review.get("critical_error", False)
+        and not row.get("error")
+        and (row["kind"] != "answerable" or review["citations_supported"])
+    )
+
+
 def summarize(report: JSONObject, reviewer: str = "human") -> JSONObject:
     rows = report["results"]
     totals = {
@@ -70,12 +81,7 @@ def summarize(report: JSONObject, reviewer: str = "human") -> JSONObject:
     passes = {kind: 0 for kind in totals}
     for row in reviewed:
         review = row["reviews"][reviewer]
-        passed = (
-            review["correct"] and review["behavior_satisfied"] and not row.get("error")
-        )
-        if row["kind"] == "answerable":
-            passed = passed and review["citations_supported"]
-        if passed:
+        if review_passes(row, review):
             passes[row["kind"]] += 1
     standard = [row for row in rows if row["kind"] == "answerable"][:10]
     timings = [row["latency_seconds"] for row in standard if not row.get("error")]
@@ -142,25 +148,13 @@ def markdown(report: JSONObject) -> str:
         status = (
             "pending"
             if not review
-            else (
-                "pass"
-                if review["correct"]
-                and review["behavior_satisfied"]
-                and (row["kind"] != "answerable" or review["citations_supported"])
-                else "fail"
-            )
+            else ("pass" if review_passes(row, review) else "fail")
         )
         assessed = row.get("reviews", {}).get("agent")
         agent_status = (
             "pending"
             if not assessed
-            else (
-                "pass"
-                if assessed["correct"]
-                and assessed["behavior_satisfied"]
-                and (row["kind"] != "answerable" or assessed["citations_supported"])
-                else "fail"
-            )
+            else ("pass" if review_passes(row, assessed) else "fail")
         )
         lines.append(
             f"| {row['id']} | {row['kind']} | {row['latency_seconds']:.2f} | {row['expected_source_retrieved']} | {agent_status} | {status} |"
