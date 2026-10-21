@@ -29,6 +29,8 @@ Keep annotations outside Git until a fictional-corpus report is explicitly expor
 
 Correctness requires preserving material limits, dates, approvals, and exceptions. Citation support requires the returned evidence to establish substantive answer claims, not just a related document title. For unsupported questions, the assistant must avoid invented facts and acknowledge missing evidence. For ambiguity/conflict questions, it must surface the relevant distinction or uncertainty. An invented critical policy rule or omitted material condition is a critical error.
 
+Review the final answer. JSON retains raw upstream output, including any model reasoning; Markdown omits a closed reasoning block for readability. Reasoning is not supporting evidence. A citation to a different or unretrieved document fails support even when a correct passage was available. Answerable and ambiguous answers both require supported citations; missing-evidence refusals may have no sources.
+
 ## Acceptance
 
 - At least 18/20 answerable questions correct and supported.

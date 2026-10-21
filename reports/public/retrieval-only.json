@@ -1,0 +1,1870 @@
+{
+  "checked_at": "20261021T102238297065Z",
+  "scope": "Retrieval-only diagnostic, not a factual correctness grade",
+  "topN": 4,
+  "threshold": 0.25,
+  "application_network": "isolated",
+  "results": [
+    {
+      "id": "P01",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-EXPENSES",
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 1.0197,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.417353093624115,
+          "score": 0.582646906375885
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6269530057907104,
+          "score": 0.37304699420928955
+        },
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6779792308807373,
+          "score": 0.3220207691192627
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6981366872787476,
+          "score": 0.30186331272125244
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0428,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.34860289096832275,
+          "score": 0.6513971090316772
+        },
+        {
+          "id": "dce59d0e-f410-400e-9df1-9359867c8acd",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\nDocument ID: LD-LEAVE\nTitle: Leave policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nEffective/version date: 2026-01-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Leave policy\n\nDocument ID: LD-LEAVE\nAuthority: Published policy, effective 2026-01-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nThis organization and every rule below are fictional demonstration material.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.6108520030975342,
+          "score": 0.3891479969024658
+        },
+        {
+          "id": "3e8ef0f5-56e7-4021-a591-8b84e1976836",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Authority\nThis published policy governs leave. All-hands discussion, pilot proposals, and informal messages do not change it.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.6188892126083374,
+          "score": 0.3811107873916626
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6378817558288574,
+          "score": 0.3621182441711426
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0297,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.4380369186401367,
+          "score": 0.5619630813598633
+        },
+        {
+          "id": "3e8ef0f5-56e7-4021-a591-8b84e1976836",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Authority\nThis published policy governs leave. All-hands discussion, pilot proposals, and informal messages do not change it.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.6957277059555054,
+          "score": 0.30427229404449463
+        },
+        {
+          "id": "dce59d0e-f410-400e-9df1-9359867c8acd",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\nDocument ID: LD-LEAVE\nTitle: Leave policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nEffective/version date: 2026-01-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Leave policy\n\nDocument ID: LD-LEAVE\nAuthority: Published policy, effective 2026-01-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nThis organization and every rule below are fictional demonstration material.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.70957350730896,
+          "score": 0.29042649269104004
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.7395364046096802,
+          "score": 0.2604635953903198
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0291,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.42213374376296997,
+          "score": 0.57786625623703
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6175333857536316,
+          "score": 0.3824666142463684
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6235029697418213,
+          "score": 0.3764970302581787
+        },
+        {
+          "id": "dce59d0e-f410-400e-9df1-9359867c8acd",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\nDocument ID: LD-LEAVE\nTitle: Leave policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nEffective/version date: 2026-01-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Leave policy\n\nDocument ID: LD-LEAVE\nAuthority: Published policy, effective 2026-01-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md\nThis organization and every rule below are fictional demonstration material.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.6806514859199524,
+          "score": 0.3193485140800476
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-EXPENSES",
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0218,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.33053046464920044,
+          "score": 0.6694695353507996
+        },
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6804183721542358,
+          "score": 0.31958162784576416
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6960502862930298,
+          "score": 0.3039497137069702
+        },
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6982135772705078,
+          "score": 0.3017864227294922
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LEAVE"
+      ],
+      "source_ids": [
+        "LD-LEAVE"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.02,
+      "results": [
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.4005712866783142,
+          "score": 0.5994287133216858
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LOCATION"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION",
+        "LD-ONBOARDING"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0193,
+      "results": [
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.25149470567703247,
+          "score": 0.7485052943229675
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.31895095109939575,
+          "score": 0.6810490489006042
+        },
+        {
+          "id": "9f900764-99aa-479f-a363-74c94303d097",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-ONBOARDING\nTitle: Onboarding procedure\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nEffective/version date: 2026-08-01\nOwner: People Operations and IT\nAuthority: Published procedure\n\n# Northstar Demo — Onboarding procedure\n\nDocument ID: LD-ONBOARDING\nAuthority: Published procedure, effective 2026-08-01\nOwner: People Operations and IT\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nThis organization and every rule below are fictional demonstration material.\n\n## Before and on the first day\nPeople Operations sends the welcome pack before the start date.\nIT provisions the laptop and company account. The employee must enable multi-factor authentication on the first working day.\nFor a missing account or laptop, contact IT through the IT help desk. Do not share another employee's account.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.5981533527374268,
+          "score": 0.40184664726257324
+        },
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.6117087602615356,
+          "score": 0.38829123973846436
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LOCATION"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION",
+        "LD-ONBOARDING"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.021,
+      "results": [
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.2285860776901245,
+          "score": 0.7714139223098755
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.29532110691070557,
+          "score": 0.7046788930892944
+        },
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.5962443947792053,
+          "score": 0.4037556052207947
+        },
+        {
+          "id": "9f900764-99aa-479f-a363-74c94303d097",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-ONBOARDING\nTitle: Onboarding procedure\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nEffective/version date: 2026-08-01\nOwner: People Operations and IT\nAuthority: Published procedure\n\n# Northstar Demo — Onboarding procedure\n\nDocument ID: LD-ONBOARDING\nAuthority: Published procedure, effective 2026-08-01\nOwner: People Operations and IT\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nThis organization and every rule below are fictional demonstration material.\n\n## Before and on the first day\nPeople Operations sends the welcome pack before the start date.\nIT provisions the laptop and company account. The employee must enable multi-factor authentication on the first working day.\nFor a missing account or laptop, contact IT through the IT help desk. Do not share another employee's account.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.6077797412872314,
+          "score": 0.39222025871276855
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-LOCATION"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0192,
+      "results": [
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.28593796491622925,
+          "score": 0.7140620350837708
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.48514920473098755,
+          "score": 0.5148507952690125
+        },
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.716258704662323,
+          "score": 0.283741295337677
+        },
+        {
+          "id": "3e8ef0f5-56e7-4021-a591-8b84e1976836",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Authority\nThis published policy governs leave. All-hands discussion, pilot proposals, and informal messages do not change it.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.7248880863189697,
+          "score": 0.2751119136810303
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-EXPENSES"
+      ],
+      "source_ids": [
+        "LD-EXPENSES",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0223,
+      "results": [
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.36005455255508423,
+          "score": 0.6399454474449158
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.7341881990432739,
+          "score": 0.2658118009567261
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.7403665781021118,
+          "score": 0.2596334218978882
+        },
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.7421826720237732,
+          "score": 0.2578173279762268
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-EXPENSES"
+      ],
+      "source_ids": [
+        "LD-EXPENSES",
+        "LD-ONBOARDING"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0208,
+      "results": [
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.3108330965042114,
+          "score": 0.6891669034957886
+        },
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6516338586807251,
+          "score": 0.3483661413192749
+        },
+        {
+          "id": "5892011a-800d-4958-9540-1c43b9c98d7e",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## First ten working days\nComplete security awareness training within the first 10 working days.\nThe manager assigns an onboarding buddy and agrees on a first-month learning plan.\nThe buddy helps explain team practices but cannot approve leave or equipment purchases.\nManagers approve leave; Finance owns expense rules.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.6943289041519165,
+          "score": 0.3056710958480835
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-EXPENSES"
+      ],
+      "source_ids": [
+        "LD-EXPENSES"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0174,
+      "results": [
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.5545077323913574,
+          "score": 0.4454922676086426
+        },
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.7481164336204529,
+          "score": 0.2518835663795471
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-EXPENSES"
+      ],
+      "source_ids": [
+        "LD-EXPENSES"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0196,
+      "results": [
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.5026688575744629,
+          "score": 0.4973311424255371
+        },
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.5417561531066895,
+          "score": 0.45824384689331055
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-ONBOARDING"
+      ],
+      "source_ids": [
+        "LD-LOCATION",
+        "LD-ONBOARDING"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0156,
+      "results": [
+        {
+          "id": "9f900764-99aa-479f-a363-74c94303d097",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-ONBOARDING\nTitle: Onboarding procedure\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nEffective/version date: 2026-08-01\nOwner: People Operations and IT\nAuthority: Published procedure\n\n# Northstar Demo — Onboarding procedure\n\nDocument ID: LD-ONBOARDING\nAuthority: Published procedure, effective 2026-08-01\nOwner: People Operations and IT\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nThis organization and every rule below are fictional demonstration material.\n\n## Before and on the first day\nPeople Operations sends the welcome pack before the start date.\nIT provisions the laptop and company account. The employee must enable multi-factor authentication on the first working day.\nFor a missing account or laptop, contact IT through the IT help desk. Do not share another employee's account.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.5011847019195557,
+          "score": 0.49881529808044434
+        },
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.7154990434646606,
+          "score": 0.28450095653533936
+        },
+        {
+          "id": "5892011a-800d-4958-9540-1c43b9c98d7e",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## First ten working days\nComplete security awareness training within the first 10 working days.\nThe manager assigns an onboarding buddy and agrees on a first-month learning plan.\nThe buddy helps explain team practices but cannot approve leave or equipment purchases.\nManagers approve leave; Finance owns expense rules.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.7492550015449524,
+          "score": 0.2507449984550476
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-ONBOARDING"
+      ],
+      "source_ids": [
+        "LD-EXPENSES",
+        "LD-LEAVE",
+        "LD-ONBOARDING"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.018,
+      "results": [
+        {
+          "id": "5892011a-800d-4958-9540-1c43b9c98d7e",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## First ten working days\nComplete security awareness training within the first 10 working days.\nThe manager assigns an onboarding buddy and agrees on a first-month learning plan.\nThe buddy helps explain team practices but cannot approve leave or equipment purchases.\nManagers approve leave; Finance owns expense rules.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.45607954263687134,
+          "score": 0.5439204573631287
+        },
+        {
+          "id": "9f900764-99aa-479f-a363-74c94303d097",
+          "text": "<document_metadata>\nsourceDocument: ld-onboarding-onboarding-procedure.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-ONBOARDING\nTitle: Onboarding procedure\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nEffective/version date: 2026-08-01\nOwner: People Operations and IT\nAuthority: Published procedure\n\n# Northstar Demo — Onboarding procedure\n\nDocument ID: LD-ONBOARDING\nAuthority: Published procedure, effective 2026-08-01\nOwner: People Operations and IT\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md\nThis organization and every rule below are fictional demonstration material.\n\n## Before and on the first day\nPeople Operations sends the welcome pack before the start date.\nIT provisions the laptop and company account. The employee must enable multi-factor authentication on the first working day.\nFor a missing account or laptop, contact IT through the IT help desk. Do not share another employee's account.",
+          "metadata": {
+            "url": "file://ld-onboarding-onboarding-procedure.txt",
+            "title": "ld-onboarding-onboarding-procedure.txt",
+            "author": "People Operations and IT",
+            "description": "Published procedure",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/onboarding.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 132,
+            "tokenCount": 266
+          },
+          "distance": 0.6099280118942261,
+          "score": 0.3900719881057739
+        },
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6939340233802795,
+          "score": 0.30606597661972046
+        },
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.7112082242965698,
+          "score": 0.2887917757034302
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-VISION"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT",
+        "LD-VISION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0218,
+      "results": [
+        {
+          "id": "badc8269-d438-4a39-8b48-bd695c0a75e9",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-VISION\nTitle: Company vision\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nEffective/version date: 2026-09-01\nOwner: Leadership\nAuthority: Strategic direction, not policy\n\n# Northstar Demo — Company vision\n\nDocument ID: LD-VISION\nAuthority: Strategic direction, version 2026-09-01; not an employee policy\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nThis organization and every statement below are fictional demonstration material.\n\n## Mission and audience\nNorthstar's mission is to give small nonprofit teams more time for their work by reducing repetitive administration.\nThe initial product audience is small nonprofit operations teams, rather than large enterprise finance departments.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.5220850706100464,
+          "score": 0.4779149293899536
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.6750004291534424,
+          "score": 0.3249995708465576
+        },
+        {
+          "id": "4b868aa4-86b6-4de4-857f-dca353755ea1",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-OCT\nTitle: All-hands October 9\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nEffective/version date: 2026-10-09\nOwner: Leadership\nAuthority: Dated meeting notes with unresolved proposals\n\n# Northstar Demo — All-hands, October 9, 2026\n\nDocument ID: LD-AH-OCT\nAuthority: Dated meeting notes; unresolved items and proposals are labeled\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nThis organization and every statement below are fictional demonstration material.\n\n## Pilot update\nThe onboarding checklist pilot expanded from 5 to 12 volunteer nonprofit teams.\nThe two pilot measures remain time to first completed workflow and participant-reported clarity.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.6751549243927002,
+          "score": 0.3248450756072998
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-VISION"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-VISION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0173,
+      "results": [
+        {
+          "id": "90736d4e-17a3-4a0a-bcca-412973d2e4dd",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Product principles\nThe three product principles are reliability, clarity, and accessibility.\nReliability means making routine workflows dependable. Clarity means explaining status and next steps in plain language.\nAccessibility means designing for people with different abilities and levels of technical experience.\n\n## Direction\nFor the next planning cycle, improving activation for new small-team customers takes priority over adding a long list of advanced settings.\nThis is strategic direction, not a promise of a specific delivery date, revenue result, employment benefit, or contractual commitment.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.24162381887435913,
+          "score": 0.7583761811256409
+        },
+        {
+          "id": "badc8269-d438-4a39-8b48-bd695c0a75e9",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-VISION\nTitle: Company vision\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nEffective/version date: 2026-09-01\nOwner: Leadership\nAuthority: Strategic direction, not policy\n\n# Northstar Demo — Company vision\n\nDocument ID: LD-VISION\nAuthority: Strategic direction, version 2026-09-01; not an employee policy\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nThis organization and every statement below are fictional demonstration material.\n\n## Mission and audience\nNorthstar's mission is to give small nonprofit teams more time for their work by reducing repetitive administration.\nThe initial product audience is small nonprofit operations teams, rather than large enterprise finance departments.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.4899793863296509,
+          "score": 0.5100206136703491
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.7030401229858398,
+          "score": 0.29695987701416016
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-VISION"
+      ],
+      "source_ids": [
+        "LD-VISION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0157,
+      "results": [
+        {
+          "id": "90736d4e-17a3-4a0a-bcca-412973d2e4dd",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Product principles\nThe three product principles are reliability, clarity, and accessibility.\nReliability means making routine workflows dependable. Clarity means explaining status and next steps in plain language.\nAccessibility means designing for people with different abilities and levels of technical experience.\n\n## Direction\nFor the next planning cycle, improving activation for new small-team customers takes priority over adding a long list of advanced settings.\nThis is strategic direction, not a promise of a specific delivery date, revenue result, employment benefit, or contractual commitment.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.6595117449760437,
+          "score": 0.3404882550239563
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0217,
+      "results": [
+        {
+          "id": "4b868aa4-86b6-4de4-857f-dca353755ea1",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-OCT\nTitle: All-hands October 9\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nEffective/version date: 2026-10-09\nOwner: Leadership\nAuthority: Dated meeting notes with unresolved proposals\n\n# Northstar Demo — All-hands, October 9, 2026\n\nDocument ID: LD-AH-OCT\nAuthority: Dated meeting notes; unresolved items and proposals are labeled\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nThis organization and every statement below are fictional demonstration material.\n\n## Pilot update\nThe onboarding checklist pilot expanded from 5 to 12 volunteer nonprofit teams.\nThe two pilot measures remain time to first completed workflow and participant-reported clarity.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.45133525133132935,
+          "score": 0.5486647486686707
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.5071658492088318,
+          "score": 0.4928341507911682
+        },
+        {
+          "id": "8b9f3f04-a88d-4c62-97ce-fc7aed1d276e",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Unresolved rollout date\nProduct recorded a target of Q4 2026 for the onboarding checklist rollout.\nEngineering recorded Q1 2027 for that same rollout. The meeting did not reconcile these dates or approve a final date.\nTreat the rollout date as unresolved and ask Product and Engineering for confirmation; do not silently choose the later or earlier date.\n\n## Leave proposal\nA proposal would raise annual leave carryover to 10 days. It is awaiting review and is not approved.\nThe current published allowance remains up to 5 carried annual leave days, used by March 31. Meeting notes do not amend that policy.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.6686730980873108,
+          "score": 0.3313269019126892
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "kind": "answerable",
+      "expected_sources": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT",
+        "LD-VISION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0207,
+      "results": [
+        {
+          "id": "4b868aa4-86b6-4de4-857f-dca353755ea1",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-OCT\nTitle: All-hands October 9\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nEffective/version date: 2026-10-09\nOwner: Leadership\nAuthority: Dated meeting notes with unresolved proposals\n\n# Northstar Demo — All-hands, October 9, 2026\n\nDocument ID: LD-AH-OCT\nAuthority: Dated meeting notes; unresolved items and proposals are labeled\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nThis organization and every statement below are fictional demonstration material.\n\n## Pilot update\nThe onboarding checklist pilot expanded from 5 to 12 volunteer nonprofit teams.\nThe two pilot measures remain time to first completed workflow and participant-reported clarity.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.6087599396705627,
+          "score": 0.39124006032943726
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.6343916654586792,
+          "score": 0.3656083345413208
+        },
+        {
+          "id": "90736d4e-17a3-4a0a-bcca-412973d2e4dd",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Product principles\nThe three product principles are reliability, clarity, and accessibility.\nReliability means making routine workflows dependable. Clarity means explaining status and next steps in plain language.\nAccessibility means designing for people with different abilities and levels of technical experience.\n\n## Direction\nFor the next planning cycle, improving activation for new small-team customers takes priority over adding a long list of advanced settings.\nThis is strategic direction, not a promise of a specific delivery date, revenue result, employment benefit, or contractual commitment.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.6833513975143433,
+          "score": 0.31664860248565674
+        },
+        {
+          "id": "8b9f3f04-a88d-4c62-97ce-fc7aed1d276e",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Unresolved rollout date\nProduct recorded a target of Q4 2026 for the onboarding checklist rollout.\nEngineering recorded Q1 2027 for that same rollout. The meeting did not reconcile these dates or approve a final date.\nTreat the rollout date as unresolved and ask Product and Engineering for confirmation; do not silently choose the later or earlier date.\n\n## Leave proposal\nA proposal would raise annual leave carryover to 10 days. It is awaiting review and is not approved.\nThe current published allowance remains up to 5 carried annual leave days, used by March 31. Meeting notes do not amend that policy.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.7056477069854736,
+          "score": 0.29435229301452637
+        }
+      ]
+    },
+    {
+      "id": "U01",
+      "kind": "unsupported",
+      "expected_sources": [],
+      "source_ids": [
+        "LD-EXPENSES"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0261,
+      "results": [
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.5537374019622803,
+          "score": 0.4462625980377197
+        },
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6045688986778259,
+          "score": 0.3954311013221741
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "kind": "unsupported",
+      "expected_sources": [],
+      "source_ids": [],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0161,
+      "results": []
+    },
+    {
+      "id": "U03",
+      "kind": "unsupported",
+      "expected_sources": [],
+      "source_ids": [],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0155,
+      "results": []
+    },
+    {
+      "id": "U04",
+      "kind": "unsupported",
+      "expected_sources": [],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-VISION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0173,
+      "results": [
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.7137661576271057,
+          "score": 0.2862338423728943
+        },
+        {
+          "id": "badc8269-d438-4a39-8b48-bd695c0a75e9",
+          "text": "<document_metadata>\nsourceDocument: ld-vision-company-vision.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-VISION\nTitle: Company vision\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nEffective/version date: 2026-09-01\nOwner: Leadership\nAuthority: Strategic direction, not policy\n\n# Northstar Demo — Company vision\n\nDocument ID: LD-VISION\nAuthority: Strategic direction, version 2026-09-01; not an employee policy\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md\nThis organization and every statement below are fictional demonstration material.\n\n## Mission and audience\nNorthstar's mission is to give small nonprofit teams more time for their work by reducing repetitive administration.\nThe initial product audience is small nonprofit operations teams, rather than large enterprise finance departments.",
+          "metadata": {
+            "url": "file://ld-vision-company-vision.txt",
+            "title": "ld-vision-company-vision.txt",
+            "author": "Leadership",
+            "description": "Strategic direction, not policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/vision.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 148,
+            "tokenCount": 282
+          },
+          "distance": 0.7354732751846313,
+          "score": 0.26452672481536865
+        }
+      ]
+    },
+    {
+      "id": "U05",
+      "kind": "unsupported",
+      "expected_sources": [],
+      "source_ids": [],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0168,
+      "results": []
+    },
+    {
+      "id": "A01",
+      "kind": "ambiguous",
+      "expected_sources": [
+        "LD-AH-AUG"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0177,
+      "results": [
+        {
+          "id": "2a700c4c-f835-4fd2-8240-69bedfeca4ba",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Working-week discussion\nLeadership discussed exploring a 4-day working-week experiment. This was a proposal only, with no start date or approval.\nThe published normal working week remains 5 working days. Employees should not treat the discussion as a new benefit or schedule.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.5060887336730957,
+          "score": 0.4939112663269043
+        },
+        {
+          "id": "8b9f3f04-a88d-4c62-97ce-fc7aed1d276e",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Unresolved rollout date\nProduct recorded a target of Q4 2026 for the onboarding checklist rollout.\nEngineering recorded Q1 2027 for that same rollout. The meeting did not reconcile these dates or approve a final date.\nTreat the rollout date as unresolved and ask Product and Engineering for confirmation; do not silently choose the later or earlier date.\n\n## Leave proposal\nA proposal would raise annual leave carryover to 10 days. It is awaiting review and is not approved.\nThe current published allowance remains up to 5 carried annual leave days, used by March 31. Meeting notes do not amend that policy.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.6432012319564819,
+          "score": 0.35679876804351807
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "kind": "ambiguous",
+      "expected_sources": [
+        "LD-AH-OCT"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0157,
+      "results": [
+        {
+          "id": "8b9f3f04-a88d-4c62-97ce-fc7aed1d276e",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Unresolved rollout date\nProduct recorded a target of Q4 2026 for the onboarding checklist rollout.\nEngineering recorded Q1 2027 for that same rollout. The meeting did not reconcile these dates or approve a final date.\nTreat the rollout date as unresolved and ask Product and Engineering for confirmation; do not silently choose the later or earlier date.\n\n## Leave proposal\nA proposal would raise annual leave carryover to 10 days. It is awaiting review and is not approved.\nThe current published allowance remains up to 5 carried annual leave days, used by March 31. Meeting notes do not amend that policy.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.3398803472518921,
+          "score": 0.6601196527481079
+        },
+        {
+          "id": "2a700c4c-f835-4fd2-8240-69bedfeca4ba",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Working-week discussion\nLeadership discussed exploring a 4-day working-week experiment. This was a proposal only, with no start date or approval.\nThe published normal working week remains 5 working days. Employees should not treat the discussion as a new benefit or schedule.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.5698232650756836,
+          "score": 0.4301767349243164
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.6803460121154785,
+          "score": 0.3196539878845215
+        },
+        {
+          "id": "4b868aa4-86b6-4de4-857f-dca353755ea1",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-OCT\nTitle: All-hands October 9\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nEffective/version date: 2026-10-09\nOwner: Leadership\nAuthority: Dated meeting notes with unresolved proposals\n\n# Northstar Demo — All-hands, October 9, 2026\n\nDocument ID: LD-AH-OCT\nAuthority: Dated meeting notes; unresolved items and proposals are labeled\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nThis organization and every statement below are fictional demonstration material.\n\n## Pilot update\nThe onboarding checklist pilot expanded from 5 to 12 volunteer nonprofit teams.\nThe two pilot measures remain time to first completed workflow and participant-reported clarity.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.691162645816803,
+          "score": 0.308837354183197
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "kind": "ambiguous",
+      "expected_sources": [
+        "LD-AH-OCT"
+      ],
+      "source_ids": [
+        "LD-AH-AUG",
+        "LD-AH-OCT"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0185,
+      "results": [
+        {
+          "id": "8b9f3f04-a88d-4c62-97ce-fc7aed1d276e",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Unresolved rollout date\nProduct recorded a target of Q4 2026 for the onboarding checklist rollout.\nEngineering recorded Q1 2027 for that same rollout. The meeting did not reconcile these dates or approve a final date.\nTreat the rollout date as unresolved and ask Product and Engineering for confirmation; do not silently choose the later or earlier date.\n\n## Leave proposal\nA proposal would raise annual leave carryover to 10 days. It is awaiting review and is not approved.\nThe current published allowance remains up to 5 carried annual leave days, used by March 31. Meeting notes do not amend that policy.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.31366634368896484,
+          "score": 0.6863336563110352
+        },
+        {
+          "id": "4b868aa4-86b6-4de4-857f-dca353755ea1",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-oct-all-hands-october-9.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-OCT\nTitle: All-hands October 9\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nEffective/version date: 2026-10-09\nOwner: Leadership\nAuthority: Dated meeting notes with unresolved proposals\n\n# Northstar Demo — All-hands, October 9, 2026\n\nDocument ID: LD-AH-OCT\nAuthority: Dated meeting notes; unresolved items and proposals are labeled\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md\nThis organization and every statement below are fictional demonstration material.\n\n## Pilot update\nThe onboarding checklist pilot expanded from 5 to 12 volunteer nonprofit teams.\nThe two pilot measures remain time to first completed workflow and participant-reported clarity.",
+          "metadata": {
+            "url": "file://ld-ah-oct-all-hands-october-9.txt",
+            "title": "ld-ah-oct-all-hands-october-9.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes with unresolved proposals",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-10-09.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 165,
+            "tokenCount": 331
+          },
+          "distance": 0.5754977464675903,
+          "score": 0.42450225353240967
+        },
+        {
+          "id": "3614138a-6a7f-4612-b56a-c25653d1fb5a",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\nDocument ID: LD-AH-AUG\nTitle: All-hands August 14\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nEffective/version date: 2026-08-14\nOwner: Leadership\nAuthority: Dated meeting notes\n\n# Northstar Demo — All-hands, August 14, 2026\n\nDocument ID: LD-AH-AUG\nAuthority: Dated meeting notes; proposals do not amend published policies\nOwner: Leadership\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md\nThis organization and every statement below are fictional demonstration material.\n\n## Product progress\nThe onboarding checklist pilot began with 5 volunteer nonprofit teams.\nThe pilot measures time to first completed workflow and participant-reported clarity.\nNo revenue numbers were disclosed in this meeting.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.5790262222290039,
+          "score": 0.4209737777709961
+        },
+        {
+          "id": "2a700c4c-f835-4fd2-8240-69bedfeca4ba",
+          "text": "<document_metadata>\nsourceDocument: ld-ah-aug-all-hands-august-14.txt\npublished: 10/21/2026, 8:15:39 AM\n</document_metadata>\n\n## Working-week discussion\nLeadership discussed exploring a 4-day working-week experiment. This was a proposal only, with no start date or approval.\nThe published normal working week remains 5 working days. Employees should not treat the discussion as a new benefit or schedule.",
+          "metadata": {
+            "url": "file://ld-ah-aug-all-hands-august-14.txt",
+            "title": "ld-ah-aug-all-hands-august-14.txt",
+            "author": "Leadership",
+            "description": "Dated meeting notes",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/context/all-hands-2026-08-14.md",
+            "published": "10/21/2026, 8:15:39 AM",
+            "wordCount": 109,
+            "tokenCount": 259
+          },
+          "distance": 0.6507673859596252,
+          "score": 0.34923261404037476
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "kind": "ambiguous",
+      "expected_sources": [
+        "LD-LOCATION"
+      ],
+      "source_ids": [
+        "LD-LEAVE",
+        "LD-LOCATION"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.022,
+      "results": [
+        {
+          "id": "dc1b4135-5a64-49d4-9ac3-01a74cadfb4b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-LOCATION\nTitle: Work location policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nEffective/version date: 2026-07-01\nOwner: People Operations\nAuthority: Published policy\n\n# Northstar Demo — Work location policy\n\nDocument ID: LD-LOCATION\nAuthority: Published policy, effective 2026-07-01\nOwner: People Operations\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md\nThis organization and every rule below are fictional demonstration material.\n\n## Normal arrangement\nThe normal working week has 5 working days, Monday through Friday.\nEmployees assigned to the hybrid arrangement attend the office on Wednesday and Thursday.\nEmployees with a signed fully remote agreement follow that agreement instead of the hybrid office-day requirement.\nWithout knowing an employee's agreement, do not assume whether that employee is hybrid or fully remote.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.628130316734314,
+          "score": 0.37186968326568604
+        },
+        {
+          "id": "c326e041-34bc-4cff-a57b-9915e40ffa2b",
+          "text": "<document_metadata>\nsourceDocument: ld-location-work-location-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Temporary remote weeks\nA hybrid employee may request up to 4 full remote weeks per calendar year.\nEach request requires advance approval from both the manager and People Operations.\nTemporary remote weeks do not automatically permit international work.\nWorking from another country requires a separate Legal review and written approval before travel, in addition to the normal remote-work approvals.\n\n## Experiments\nA proposed 4-day working week has not been adopted as company policy. The normal 5-day working week remains in effect.",
+          "metadata": {
+            "url": "file://ld-location-work-location-policy.txt",
+            "title": "ld-location-work-location-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/work-location.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 166,
+            "tokenCount": 304
+          },
+          "distance": 0.6479553580284119,
+          "score": 0.35204464197158813
+        },
+        {
+          "id": "78c5ced9-20d0-4745-98c0-196c63693e4f",
+          "text": "<document_metadata>\nsourceDocument: ld-leave-leave-policy.txt\npublished: 10/21/2026, 8:02:07 AM\n</document_metadata>\n\n## Annual leave\nFull-time employees receive 20 paid annual leave days per calendar year.\nUp to 5 unused annual leave days may carry into the next calendar year.\nCarried days must be used by March 31 of that next year; unused carried days expire.\nEmployees normally submit annual leave requests at least 5 working days before the first day off.\nFor an emergency, notify the manager as soon as reasonably possible; the 5-working-day notice requirement does not apply.\nAnnual leave needs the employee's manager's approval. People Operations records the approved dates.\n\n## Sick leave\nEmployees receive 8 paid sick leave days per calendar year.\nA medical certificate is required for an absence of 3 or more consecutive working days.\nFor one or two consecutive working days, a medical certificate is not required under this policy.\nNotify the manager before the normal start of work where possible.",
+          "metadata": {
+            "url": "file://ld-leave-leave-policy.txt",
+            "title": "ld-leave-leave-policy.txt",
+            "author": "People Operations",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/leave.md",
+            "published": "10/21/2026, 8:02:07 AM",
+            "wordCount": 185,
+            "tokenCount": 339
+          },
+          "distance": 0.725117027759552,
+          "score": 0.274882972240448
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "kind": "ambiguous",
+      "expected_sources": [
+        "LD-EXPENSES"
+      ],
+      "source_ids": [
+        "LD-EXPENSES"
+      ],
+      "all_expected_retrieved": true,
+      "latency_seconds": 0.0218,
+      "results": [
+        {
+          "id": "31937e5a-158c-41e8-a1b3-425d2ac5f491",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\nDocument ID: LD-EXPENSES\nTitle: Expenses and learning policy\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nEffective/version date: 2026-04-01\nOwner: Finance\nAuthority: Published policy\n\n# Northstar Demo — Expenses and learning policy\n\nDocument ID: LD-EXPENSES\nAuthority: Published policy, effective 2026-04-01\nOwner: Finance\nSource: https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md\nThis organization and every rule below are fictional demonstration material.\n\n## Home-office equipment allowance\nThe home-office equipment allowance is USD 180 per employee per calendar year.\nIt covers a keyboard, mouse, headset, monitor stand, or equivalent approved ergonomic equipment.\nThe allowance does not cover rent, internet subscriptions, or electricity.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.45896679162979126,
+          "score": 0.5410332083702087
+        },
+        {
+          "id": "77d7fd3f-4715-40b2-ad1c-750b4c8b27d0",
+          "text": "<document_metadata>\nsourceDocument: ld-expenses-expenses-and-learning-policy.txt\npublished: 10/21/2026, 8:15:38 AM\n</document_metadata>\n\n## Learning budget\nThe learning budget is USD 600 per employee per calendar year.\nA course or conference must receive the manager's written approval before purchase.\nApproval after purchase is not guaranteed. Unused learning budget does not carry forward.\n\n## Reimbursement\nSubmit a reimbursement request within 30 calendar days after purchase.\nA receipt is required for any individual expense above USD 25; USD 25 exactly does not trigger this receipt requirement.\nFinance reviews the request after manager approval.\nThis document does not specify a meal allowance or an insurance provider.",
+          "metadata": {
+            "url": "file://ld-expenses-expenses-and-learning-policy.txt",
+            "title": "ld-expenses-expenses-and-learning-policy.txt",
+            "author": "Finance",
+            "description": "Published policy",
+            "docSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "chunkSource": "https://github.com/mehboobali98/loredock/blob/main/examples/northstar/policies/expenses.md",
+            "published": "10/21/2026, 8:15:38 AM",
+            "wordCount": 153,
+            "tokenCount": 301
+          },
+          "distance": 0.6258120536804199,
+          "score": 0.3741879463195801
+        }
+      ]
+    }
+  ],
+  "classification": "public-demo",
+  "corpus_id": "northstar-demo"
+}

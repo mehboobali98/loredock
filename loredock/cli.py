@@ -7,7 +7,14 @@ from pathlib import Path
 from . import __version__
 from .api import APIError, Client
 from .config import ROOT, home, initialize, read_json, write_json
-from .evaluate import apply_reviews, evaluate, export_public, load_suite, summarize
+from .evaluate import (
+    answer_text,
+    apply_reviews,
+    evaluate,
+    export_public,
+    load_suite,
+    summarize,
+)
 from .ingest import (
     WORKSPACE_SETTINGS,
     ask,
@@ -42,7 +49,10 @@ def update_check(api: Client) -> None:
     doc = data["documents"][0]
     slug = api.post(
         "/workspace/new",
-        {"name": "LoreDock Update Check " + timestamp(), **WORKSPACE_SETTINGS},
+        {
+            "name": "LoreDock Update Check " + timestamp(),
+            **WORKSPACE_SETTINGS,
+        },
     )["workspace"]["slug"]
     try:
         old = upload(api, doc)
@@ -65,14 +75,25 @@ def update_check(api: Client) -> None:
         response = ask(
             api, slug, "How many days is the current annual paid leave allowance?"
         )
-        serialized = json.dumps(response.get("sources", []))
+        search = api.post(
+            f"/workspace/{slug}/vector-search",
+            {
+                "query": "How many annual paid leave days?",
+                "topN": 100,
+                "scoreThreshold": 0.0,
+            },
+        )
+        serialized = json.dumps(
+            [response.get("sources", []), search.get("results", [])]
+        )
         result = {
             "checked_at": timestamp(),
             "old_document_membership_removed": True,
             "old_fixture_text_returned": "Full-time employees receive 20" in serialized,
             "answer": response["textResponse"],
             "sources": response.get("sources", []),
-            "note": "Membership and returned-source checks are mechanical; inspect the answer for 22 days.",
+            "fixture_search_chunks": len(search.get("results", [])),
+            "note": "Membership and returned-source checks are mechanical. Search covers up to 100 chunks in this tiny fixture; inspect the answer for 22 days.",
         }
         path = home() / "runs" / ("update-" + timestamp() + ".json")
         write_json(path, result)
@@ -166,7 +187,7 @@ def run(args: argparse.Namespace) -> None:
         if not state:
             raise ValueError("Ingest the corpus first.")
         response = ask(client(), state["workspaces"][args.workspace], args.question)
-        print(response["textResponse"])
+        print(answer_text(response["textResponse"]))
         print(
             "\nSources: "
             + ", ".join(

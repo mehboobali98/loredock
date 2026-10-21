@@ -5,11 +5,11 @@ import json
 import re
 import time
 from pathlib import Path
-from typing import Any, cast
+from typing import cast
 
 from .api import APIError
 from .config import ROOT, home, inside, read_json, sha256, write_json
-from .ingest import ask, manifest, verify_corpus
+from .ingest import INGESTION_REVISION, ask, manifest, verify_corpus
 from .models import JSONObject, KnowledgeAPI, PathLike, Question
 from .runtime import record_versions, timestamp
 
@@ -42,22 +42,38 @@ def load_suite(path: PathLike) -> list[Question]:
     return cast(list[Question], rows)
 
 
-def source_ids(sources: list[Any], known_ids: set[str] | None = None) -> list[str]:
-    serialized = json.dumps(sources, ensure_ascii=False)
-    if known_ids is not None:
-        # The collector normalizes titles into lower-case filenames. Match registered
-        # title prefixes, not arbitrary mentions of IDs inside a passage.
-        found = set()
-        for source in sources:
-            title = str(
-                source.get("title") or source.get("metadata", {}).get("title") or ""
-            )
-            for doc_id in sorted(known_ids, key=len, reverse=True):
-                if re.match(re.escape(doc_id) + r"(?![A-Z0-9])", title, re.IGNORECASE):
-                    found.add(doc_id)
-                    break
-        return sorted(found)
-    return sorted(set(re.findall(r"\bLD-[A-Z0-9]+(?:-[A-Z0-9]+)*\b", serialized)))
+def source_ids(sources: list[JSONObject], known_ids: set[str]) -> list[str]:
+    """Map collector-normalized titles, never ID mentions inside a passage."""
+    found = set()
+    for source in sources:
+        title = str(
+            source.get("title") or source.get("metadata", {}).get("title") or ""
+        )
+        for doc_id in sorted(known_ids, key=len, reverse=True):
+            if re.match(re.escape(doc_id) + r"(?![A-Z0-9])", title, re.IGNORECASE):
+                found.add(doc_id)
+                break
+    return sorted(found)
+
+
+def answer_text(raw: str) -> str:
+    """Display the final answer while retaining complete upstream output in JSON."""
+    text = raw.strip()
+    if text.startswith("<think>") and "</think>" in text:
+        return text.partition("</think>")[2].strip()
+    return text
+
+
+def citation_ids(raw: str) -> list[str]:
+    """Extract bracketed document labels from the final answer only."""
+    return sorted(set(re.findall(r"\[([A-Z][A-Z0-9_-]*)\]", answer_text(raw))))
+
+
+def citation_links(raw: str) -> list[str]:
+    """Record explicit final-answer links for support review, without grading them."""
+    return sorted(
+        set(re.findall(r"\[[^\]]+\]\((https?://[^\s)]+)\)", answer_text(raw)))
+    )
 
 
 def review_passes(row: JSONObject, review: JSONObject) -> bool:
@@ -67,7 +83,7 @@ def review_passes(row: JSONObject, review: JSONObject) -> bool:
         and review["behavior_satisfied"]
         and not review.get("critical_error", False)
         and not row.get("error")
-        and (row["kind"] != "answerable" or review["citations_supported"])
+        and (row["kind"] == "unsupported" or review["citations_supported"])
     )
 
 
@@ -127,6 +143,7 @@ def markdown(report: JSONObject) -> str:
         "",
         f"Classification: **{report['classification']}**. Human quality gate: **{human['quality_gate']}**.",
         "Correctness and support are review judgments; retrieving an expected document alone does not prove either.",
+        "Answers below omit a closed upstream reasoning block for readability; JSON retains the complete raw output. Reasoning text is not supporting evidence.",
         "",
         f"Human-reviewed: {human['reviewed']}/{human['total']}. Agent-reviewed: {agent['reviewed']}/{agent['total']}.",
         f"Warm latency: {human['within_30_seconds']}/{human['standard_warm_questions']} standard questions within 30 seconds.",
@@ -170,7 +187,7 @@ def markdown(report: JSONObject) -> str:
             "",
             "**Answer:**",
             "",
-            row.get("answer") or "(No answer; request failed.)",
+            answer_text(row.get("answer", "")) or "(No answer; request failed.)",
             "",
             "**Returned source IDs:** " + ", ".join(row["retrieved_source_ids"]),
             "",
@@ -231,6 +248,7 @@ def evaluate(
     if limit:
         rows = rows[:limit]
     configuration = record_versions()
+    configuration["ingestion_format_revision"] = INGESTION_REVISION
     configuration["workspaces"] = {}
     for key, slug in state["workspaces"].items():
         workspace = client.workspace(slug)
@@ -287,7 +305,8 @@ def evaluate(
                 "expected_source_retrieved": bool(
                     set(row["expected_sources"]) & set(retrieved)
                 ),
-                "inline_source_ids": source_ids([answer]),
+                "inline_source_ids": citation_ids(answer),
+                "inline_citation_urls": citation_links(answer),
                 "error": error,
                 "reviews": {},
             }
@@ -308,6 +327,9 @@ def apply_reviews(
     report = read_json(run_path)
     reviews = read_json(review_path)
     rows = {row["id"]: row for row in report["results"]}
+    for row in rows.values():
+        row["inline_source_ids"] = citation_ids(row.get("answer", ""))
+        row["inline_citation_urls"] = citation_links(row.get("answer", ""))
     if not isinstance(reviews, dict) or not set(reviews) <= set(rows):
         raise ValueError("Reviews must be an object keyed by existing question IDs.")
     for key, review in reviews.items():

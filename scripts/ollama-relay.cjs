@@ -6,7 +6,13 @@ const allowed = new Set([
   "POST /api/chat", "POST /api/generate", "POST /api/show",
 ]);
 
-/** Create a streaming HTTP relay with a fixed destination and optional route list. */
+/**
+ * Create a streaming HTTP relay with a fixed destination and optional route list.
+ * @param {string} hostname Fixed destination, never taken from a request.
+ * @param {number} port Destination port.
+ * @param {number} listener Container listener; only the UI port is host-published.
+ * @param {ReadonlySet<string> | null} routes Allowed method/path pairs, if restricted.
+ */
 function relay(hostname, port, listener, routes = null) {
   http.createServer((request, response) => {
     if (routes && !routes.has(`${request.method} ${request.url}`)) {
