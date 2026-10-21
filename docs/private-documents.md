@@ -4,6 +4,8 @@ Real-document validation remains dependent on readable exports from an authorize
 
 Put exports and the manifest under `loredock-local/private/company/`, outside the checkout. Export policies, the vision document, and two recent all-hands. Check text against originals, including conditions, tables, dates, and slide notes; image-only content needs extraction before import.
 
+For PDF exports, the CLI still expects prepared Markdown/text. Preserve the original PDF, its hash, and page references; inspect rendered pages alongside extracted text. A selectable PDF can still have broken character mappings or flattened tables. Record omitted visual content and uncertain table associations rather than guessing. The PDF creation/export timestamp is a snapshot date, not necessarily a policy effective date. Keep any extraction scripts and evidence specific to private documents outside the checkout.
+
 Use this manifest shape, replacing example values locally:
 
 ```json
