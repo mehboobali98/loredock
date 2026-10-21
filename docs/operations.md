@@ -63,5 +63,6 @@ Host reachability on an internal network depends on the Docker Desktop installat
 - Port occupied: identify the existing service before changing or stopping it. The reference app uses port 3001.
 - App cannot reach Ollama: verify host `127.0.0.1:11434/api/version`, then inspect access to `host.docker.internal:11434` from the container. Do not casually bind the model to all interfaces.
 - First embedding fails: check app logs and outbound access for the initial weight download; rerun ingest after fixing the cause. LoreDock checks actual document membership.
+- A model transfer stalls: interrupt `model pull` and retry it to resume Ollama's saved progress. The CLI reports streamed transferred-byte progress, not allocated disk space. Partial model files are not proof of a successful download; Ollama verifies the final digest.
 - Incorrect answer: inspect extracted text, retrieved passages, authority/date metadata, then model behavior. Change one retrieval setting at a time and rerun the same suite.
 - API key invalid: create a new key under AnythingLLM Developer API, set `LOREDOCK_API_KEY` locally, and revoke obsolete keys through the UI. Never put it in a command screenshot or committed file.

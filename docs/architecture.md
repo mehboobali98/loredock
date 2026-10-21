@@ -12,7 +12,7 @@ AnythingLLM's storage bind mount persists its application database, document cop
 2. Create dedicated workspaces; do not adopt an unrelated existing workspace by its display name.
 3. Hash source text and provenance together. Skip unchanged, still-indexed documents; a changed effective date or authority also triggers replacement.
 4. Upload through `/api/v1/document/raw-text`, preserving provenance in both metadata and text.
-5. Add embeddings and verify actual workspace document membership. HTTP 200 alone is insufficient: upstream may report embedding progress errors without failing the outer request.
+5. Record pending upload locations before indexing, add embeddings, and verify actual workspace document membership. HTTP 200 alone is insufficient: upstream may report embedding progress errors without failing the outer request. A retry can reconcile a completed pending indexing operation after a lost response.
 6. For a changed file, verify the new version before withdrawing the old version. A successful run checks removal. This is not a transactional update across services; stop and investigate if an API operation fails.
 7. Withdraw entries removed from the explicit manifest. Extracted files may remain on disk; this is removal from search, not guaranteed secure erasure of historical copies or backups.
 
