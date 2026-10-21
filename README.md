@@ -89,6 +89,8 @@ The CLI creates an AnythingLLM application key for its fresh, local, single-oper
 | `backup` | Stop writes, archive state, and restart the app |
 | `restore ARCHIVE --replace` | Restore while retaining previous state in a recovery directory |
 | `doctor` | Show nonsecret runtime settings and versions |
+| `offline on / off` | Enable/disable the isolated application test network |
+| `verify-offline` | Check local-model reachability, denied downloads, and blocked external HTTPS |
 
 ## Architecture and tradeoffs
 

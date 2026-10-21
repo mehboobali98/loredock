@@ -43,9 +43,13 @@ Unchanged indexed documents are skipped. Changed documents are uploaded/embedded
 
 ## Offline check
 
-After successful downloads and ingestion, `python3 -m loredock offline on` recreates the project's network as a Docker internal network. This leaves the host's connectivity unchanged. Verify from the container that an external HTTPS request fails while `host.docker.internal:11434/api/version` succeeds, then run ten questions with `python3 -m loredock eval --limit 10`. Restore normal networking with `python3 -m loredock offline off`.
+After successful downloads and ingestion, `python3 -m loredock offline on` isolates the application on a Docker internal network. A fixed-target relay, using the already pinned application image's Node runtime, bridges only native Ollama inference/inspection endpoints. Pull, push, and other management routes are denied. The relay has no published port; no new container image is needed. This leaves the host's connectivity unchanged and does not establish a host air gap.
 
-Host reachability on an internal network depends on the Docker Desktop installation. If the model becomes unreachable, restore normal networking and record the offline check as failed. Do not claim offline verification simply because a warm query happened to work while the laptop still had unrestricted internet.
+Run `python3 -m loredock verify-offline` to check from the application container that external HTTPS fails, `http://ollama-relay:11434/api/version` succeeds, and model downloads are denied. Then run ten questions with `python3 -m loredock eval --limit 10`. Restore normal networking with `python3 -m loredock offline off`. The managed native Ollama server has cloud features disabled; use downloaded local weights. A preexisting server requires its owner's configuration check.
+
+During isolation, the relay also provides a fixed application gateway at `127.0.0.1:3001`, because Docker Desktop blocked direct host access to the internal app's published port. It forwards only to the local application, never a request-selected host. Agent WebSockets and shared use are outside this test transport's scope.
+
+Direct native-host access failed on the reference Docker Desktop internal network, which motivated the relay. If local inference still becomes unreachable, restore normal networking and record the check as failed. Do not claim offline verification merely because a warm query worked with unrestricted application internet access.
 
 ## Update software and models
 

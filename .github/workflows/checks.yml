@@ -21,4 +21,7 @@ jobs:
       - run: python -m loredock --help
       - name: Validate Compose
         run: LOREDOCK_STORAGE=/tmp/loredock-storage LOREDOCK_ENV_FILE=/tmp/loredock-server.env docker compose config --quiet
+      - name: Validate offline override
+        run: LOREDOCK_STORAGE=/tmp/loredock-storage LOREDOCK_ENV_FILE=/tmp/loredock-server.env docker compose -f compose.yaml -f compose.offline.yaml config --quiet
+      - run: node --check scripts/ollama-relay.cjs && node --check scripts/check-offline.cjs
       # Live model evaluations are explicit local runs, never simulated by CI.

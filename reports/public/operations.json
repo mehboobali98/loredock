@@ -1,0 +1,14 @@
+{
+  "checked_at": "20261021T083717178474Z",
+  "restart_membership_persisted": true,
+  "backup_restore_membership_persisted": true,
+  "workspace_query_modes_persisted": true,
+  "registered_documents": 7,
+  "application_api_key_survived_restore": true,
+  "note": "Executed on the fictional corpus; model answers checked separately after the model download.",
+  "docker_internal_network": {
+    "external_https_reachable": false,
+    "native_model_reachable": false,
+    "offline_query_status": "blocked: native model unreachable"
+  }
+}
