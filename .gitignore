@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+!.env.example
+storage/
+private/
+data/
+backups/
+*.sqlite*
+*.db
+*.tar.gz
+*.log
+evaluation-results/

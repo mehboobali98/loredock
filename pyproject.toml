@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loredock"
+version = "0.1.0"
+description = "Reproducible local RAG, with source citations and human-reviewed evaluation"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Mehboob Ali"}]
+dependencies = []
+
+[project.scripts]
+loredock = "loredock.cli:main"
+
+[tool.setuptools]
+packages = ["loredock"]
